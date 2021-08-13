@@ -5,7 +5,7 @@ import time, sched
 from datetime import datetime
 
 # Set delay between averages, in seconds
-duration = 5
+duration = 60
 
 try:
     os.mkdir("logs")
@@ -140,7 +140,7 @@ for device in ips_devices:
     f = open("logs/" + log_name, "a")
     f.write("pc01,pc03,pc05,pc10,pc25,pc50,pc100,pm01,pm03,pm05,pm10,pm25,pm50,pm100,serial\n")
     f.close()
-    
+
 # Sending UART command examples
 # ser.write('$Won=200\r\n'.encode())
 # ser.write('$Winterval=1\r\n'.encode())
